@@ -8,7 +8,7 @@ const TMDB = require('./lib/TMDB')
 
 const app = express()
 app.use(cors())
-const port = process.env.SERVER_PORT || 3001
+const port = process.env.PORT || 3001
 
 app.get('/tmdb/search', async (req, res) => {
   const filterURL = TMDB.getFilterURL({
